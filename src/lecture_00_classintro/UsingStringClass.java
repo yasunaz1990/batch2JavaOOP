@@ -1,32 +1,51 @@
 package lecture_00_classintro;
 
+import java.util.Locale;
+
 public class UsingStringClass {
 
 
     public static void main(String[] args) {
+        //                               01234567
+        String name = new String("Nijat Muhtar ");
 
-        String teacherName = new String("Nijat Muhtar");
-        String fullName = new String("Nijat Muhtar");  // Object(data, copy of useful method in the class)
 
+        // 1) int length();
+        int charNums = name.length();
 
-        // int length();
-        int ret1 = fullName.length();
-        Integer result = new Integer(fullName.length());
-        System.out.println(ret1);
-
+        // 2)
         // boolean isEmpty(),
         // boolean isBlank()
-        boolean ret2 = fullName.isEmpty();
-        ret2 = fullName.isBlank();
-        System.out.println(ret2);
+        boolean noChar = name.isEmpty();
 
-        // char charAt(int index);
-        char ret3 = fullName.charAt(4);
-        System.out.println(ret3);
+        // 3) char charAt(int index);
+        char extracted = name.charAt(3);
 
-        // boolean equals(String otherTextObj);
-        boolean ret4 = fullName.equals(teacherName);
-        System.out.println(ret4);
 
+        // 4) boolean equals(String otherTextObj);
+        boolean isSame = name.equals("Nijat Muhtar");
+        System.out.println(isSame);
+
+        // 5) String toUpperCase()
+        name = name.toUpperCase();
+
+        // 6) String toLowerCase()
+        name = name.toLowerCase();
+
+
+        // 7) boolean contains(String);
+       String actualResult = "Welcome Nijat! Thank you for sign up.";
+       boolean isPassed = actualResult.contains("Nijat");
+       System.out.println(isPassed);
+
+       // 8) boolean equalsIgnoreCase(String);
+        String text1 = "nathan";
+        String text2 = "NatHan";
+
+        System.out.println(    text1.equals(text2)            ); // false
+        System.out.println(    text1.equalsIgnoreCase(text2)  ); // true
+
+        String heSaid = "hey there \"APPLE\", how are you?";
+        System.out.println(heSaid);
     }
 }
